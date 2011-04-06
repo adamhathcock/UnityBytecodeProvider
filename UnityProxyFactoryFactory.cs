@@ -19,12 +19,14 @@ namespace UnityBytecodeProvider
             return false;
         }
 
-        public NHibernate.Proxy.IProxyValidator ProxyValidator
+        public IProxyValidator ProxyValidator
         {
-            get
-            {
-                return new UnityProxyTypeValidator();
-            }
+            get { return new UnityProxyTypeValidator(); }
+        }
+
+        public bool IsProxy(object entity)
+        {
+            return entity is INHibernateProxy;
         }
 
         #endregion

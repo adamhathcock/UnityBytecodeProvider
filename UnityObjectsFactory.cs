@@ -13,6 +13,8 @@ namespace UnityBytecodeProvider
             this.container = container;
         }
 
+        #region IObjectsFactory Members
+
         public object CreateInstance(Type type, params object[] ctorArgs)
         {
             return Activator.CreateInstance(type, ctorArgs);
@@ -28,5 +30,6 @@ namespace UnityBytecodeProvider
             return container.Resolve(type);
         }
 
+        #endregion
     }
 }

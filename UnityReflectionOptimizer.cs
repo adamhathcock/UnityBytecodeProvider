@@ -7,7 +7,7 @@ namespace UnityBytecodeProvider
 {
     public class UnityReflectionOptimizer : ReflectionOptimizer
     {
-        private IUnityContainer container;
+        private readonly IUnityContainer container;
 
         public UnityReflectionOptimizer(IUnityContainer container, Type mappedType, IGetter[] getters, ISetter[] setters)
             : base(mappedType, getters, setters)

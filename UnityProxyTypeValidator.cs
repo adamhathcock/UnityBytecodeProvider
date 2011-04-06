@@ -5,7 +5,6 @@ namespace UnityBytecodeProvider
 {
     public class UnityProxyTypeValidator : DynProxyTypeValidator
     {
-
         /// <summary>
         /// Ignore this check
         /// </summary>
